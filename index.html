@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista de tareas</title>
+    <link rel="stylesheet" href="style.css"> <!--linkeamos el archivo de estilos-->
+    <script src="script.js" type="text/javascript" defer></script>  <!-- linkeamos el archivo de java con "defer" manda al final el script -->
+
+</head>
+<body>
+    <div class="list roundBorder">
+        <div class="date">
+            <div class="dateRight">
+                <div id="dateNumber"></div>
+                <div>
+                    <div id="dateMunth"></div>
+                    <div id="dateYear"></div>
+                </div>
+            </div>
+            <div id="dateText"></div>
+        </div>
+        <form onsubmit="addNewTask(event)">
+        <input type="text" name="taskText" autocomplete="off" placeholder="Agregar nuevas tareas" class="roundBorder">
+        <button type="submit" id="btnAdd" class="addTaskButton">+</button>
+        <button type="button" class="orderButton roundBorder" onclick="renderOrderdTask()">Ordenar</button>
+        </form>
+        <div id="taskContainer"></div>
+    </div>
+
+
+
+
+</body>
+</html>
